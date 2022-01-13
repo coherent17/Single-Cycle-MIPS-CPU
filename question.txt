@@ -1,3 +1,0 @@
-1. loop or case while finding rs and rt value?
-2. when to use in_valid and out_valid?
-3. should beq and bnq write in sequential circuit?
