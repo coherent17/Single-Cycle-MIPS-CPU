@@ -1,0 +1,24 @@
+配分更動:
+    增加 pipelined design 的額外 10% bonus。
+
+
+截止日期更動:
+    考量到新增pipeline規格，截止日期延後至2021/1/21。
+
+
+規格更動:
+    for non-pipeline:
+        主要規格沒有變動，補充對 pattern 行為的描述以減少疑慮。
+    for pipeline:
+        1. 兩個測資的.txt檔與 non-pipeline 共用。
+        2. pipeline 與 non-pipeline 使用不同的 PATTERN，若為 pipelined design 請於 TESTBED.v 更換，有註解說明如何修改。
+        3. branch 指令不需要做 branch prediction，在 fetch branch 後就要馬上決定 taken or not taken。
+        4. released 和 demo pattern 會將 data dependency 或 load-use 間隔至少兩個指令，避免 data hazard。 
+        5. out_valid 拉起來後就不能降下去。
+
+
+released pattern更動:
+    1. 增加 pipeline 用的 PATTERN_p.v。
+    2. PATTERN.v 有小小修改，請確認 PATTERN.v 最上方有標註 version 2 。
+    3. instruction.txt 及 mem.txt 均有擴充。
+    同學務必更新成v2的 pattern 及 .txt 檔， released pattern 指令數為 145 。
